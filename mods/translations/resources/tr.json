@@ -84,7 +84,8 @@
                             "showAIAskBtn": "Soru Düğmesini Göster",
                             "showSpeedCtrlBtn": "Hız Kontrol Düğmesini Göster",
                             "addMPBtn": "Mini Oynatıcı Düğmesini Göster",
-                            "swapMPWithPIP": "Mini Oynatıcı Düğmesini PiP Düğmesi ile Değiştir"
+                            "swapMPWithPIP": "Mini Oynatıcı Düğmesini PiP Düğmesi ile Değiştir",
+                            "showSongDisplayBtn": "Show Song Display Button"
                         }
                     },
                     "preferredVideoQuality": {
@@ -231,6 +232,18 @@
                 "seconds": "{{count}} saniye",
                 "minute": "{{count}} dakika",
                 "minutes": "{{count}} dakika"
+            },
+            "songDisplay": {
+                "title": "Song Display & Lyrics",
+                "subtitle": "Show the artwork or synced lyrics instead of the video while a song is playing",
+                "options": {
+                    "mode": {
+                        "title": "Song Display Mode",
+                        "subtitle": "Choose what to show while a song is playing"
+                    },
+                    "wordSync": "Word-by-Word Lyrics",
+                    "lyricsPlus": "Use LyricsPlus for Word-Synced Lyrics"
+                }
             }
         },
         "ttSettings": {
@@ -290,7 +303,20 @@
             "button": "Paylaş",
             "qrCodeScanMessage": "Bu videoyu paylaşmak için aşağıdaki QR kodunu tarayın."
         },
-        "screenOff": "Ekranı Kapat"
+        "screenOff": "Ekranı Kapat",
+        "songDisplay": {
+            "title": "Song Display",
+            "button": "Song Display",
+            "modes": {
+                "video": "Video",
+                "artwork": "Artwork",
+                "lyrics": "Lyrics"
+            },
+            "loading": "Loading lyrics…",
+            "notFound": "Lyrics aren't available for this song",
+            "instrumental": "Instrumental",
+            "source": "Lyrics provided by {{source}}"
+        }
     },
     "toasts": {
         "videoAddedToQueue": "Video kuyruğa eklendi.",

@@ -85,7 +85,8 @@
                             "showAIAskBtn": "Hiển thị nút Đặt câu hỏi",
                             "showSpeedCtrlBtn": "Hiển thị nút Điều khiển tốc độ",
                             "addMPBtn": "Hiển thị nút Trình phát nhỏ",
-                            "swapMPWithPIP": "Đổi nút Trình phát nhỏ thành Picture-In-Picture"
+                            "swapMPWithPIP": "Đổi nút Trình phát nhỏ thành Picture-In-Picture",
+                            "showSongDisplayBtn": "Show Song Display Button"
                         }
                     },
                     "preferredVideoQuality": {
@@ -232,6 +233,18 @@
                 "seconds": "{{count}} giây",
                 "minute": "{{count}} phút",
                 "minutes": "{{count}} phút"
+            },
+            "songDisplay": {
+                "title": "Song Display & Lyrics",
+                "subtitle": "Show the artwork or synced lyrics instead of the video while a song is playing",
+                "options": {
+                    "mode": {
+                        "title": "Song Display Mode",
+                        "subtitle": "Choose what to show while a song is playing"
+                    },
+                    "wordSync": "Word-by-Word Lyrics",
+                    "lyricsPlus": "Use LyricsPlus for Word-Synced Lyrics"
+                }
             }
         },
         "ttSettings": {
@@ -291,7 +304,20 @@
             "button": "Chia sẻ",
             "qrCodeScanMessage": "Quét mã QR ở dưới để chia sẻ video này."
         },
-        "screenOff": "Tắt màn hình"
+        "screenOff": "Tắt màn hình",
+        "songDisplay": {
+            "title": "Song Display",
+            "button": "Song Display",
+            "modes": {
+                "video": "Video",
+                "artwork": "Artwork",
+                "lyrics": "Lyrics"
+            },
+            "loading": "Loading lyrics…",
+            "notFound": "Lyrics aren't available for this song",
+            "instrumental": "Instrumental",
+            "source": "Lyrics provided by {{source}}"
+        }
     },
     "toasts": {
         "videoAddedToQueue": "Đã thêm video vào hàng chờ.",

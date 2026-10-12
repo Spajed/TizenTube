@@ -4,6 +4,7 @@ import resolveCommand from '../resolveCommand.js';
 import { timelyAction, longPressData, MenuServiceItemRenderer, ShelfRenderer, TileRenderer, ButtonRenderer } from '../ui/ytUI.js';
 import { findFeedbackToken } from '../utils/innerTubeCalls.js';
 import { PatchSettings } from '../ui/customYTSettings.js';
+import { rememberVideoDetails } from './songDisplay.js';
 import { t } from 'i18next';
 
 /**
@@ -25,6 +26,11 @@ JSON.parse = function () {
     if (r?.playbackContext?.contentPlaybackContext) {
       // Handle inline playback without ads
       console.log(r.playbackContext.contentPlaybackContext);
+    }
+
+    // Remember which videos are music for the song display (artwork / lyrics)
+    if (r?.videoDetails?.videoId) {
+      rememberVideoDetails(r.videoDetails);
     }
 
     if (r.adPlacements && adBlockEnabled) {

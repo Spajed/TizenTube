@@ -84,7 +84,8 @@
                             "showAIAskBtn": "Sual ver düyməsini göstər",
                             "showSpeedCtrlBtn": "Sürət idarəsi düyməsini göstər",
                             "addMPBtn": "Kiçik pleyer düyməsini göstər",
-                            "swapMPWithPIP": "Kiçik pleyer düyməsini PiP düyməsi ilə əvəz et"
+                            "swapMPWithPIP": "Kiçik pleyer düyməsini PiP düyməsi ilə əvəz et",
+                            "showSongDisplayBtn": "Show Song Display Button"
                         }
                     },
                     "preferredVideoQuality": {
@@ -231,6 +232,18 @@
                     "title": "TizenTube yeniləməsi",
                     "subtitle": "Yeniləmə yüklənir, gözlə..."
                 }
+            },
+            "songDisplay": {
+                "title": "Song Display & Lyrics",
+                "subtitle": "Show the artwork or synced lyrics instead of the video while a song is playing",
+                "options": {
+                    "mode": {
+                        "title": "Song Display Mode",
+                        "subtitle": "Choose what to show while a song is playing"
+                    },
+                    "wordSync": "Word-by-Word Lyrics",
+                    "lyricsPlus": "Use LyricsPlus for Word-Synced Lyrics"
+                }
             }
         },
         "ttSettings": {
@@ -290,7 +303,20 @@
             "button": "Paylaş",
             "qrCodeScanMessage": "Videonu paylaşmaq üçün aşağıdakı QR kodunu oxut."
         },
-        "screenOff": "Ekranı söndür"
+        "screenOff": "Ekranı söndür",
+        "songDisplay": {
+            "title": "Song Display",
+            "button": "Song Display",
+            "modes": {
+                "video": "Video",
+                "artwork": "Artwork",
+                "lyrics": "Lyrics"
+            },
+            "loading": "Loading lyrics…",
+            "notFound": "Lyrics aren't available for this song",
+            "instrumental": "Instrumental",
+            "source": "Lyrics provided by {{source}}"
+        }
     },
     "toasts": {
         "videoAddedToQueue": "Video növbəyə əlavə edildi.",

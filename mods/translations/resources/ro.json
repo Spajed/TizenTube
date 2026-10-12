@@ -86,7 +86,8 @@
                             "showSpeedCtrlBtn": "Afișează butonul de control al vitezei",
                             "addMPBtn": "Afișează butonul pentru Mini Player",
                             "swapMPWithPIP": "Schimbă butonul Mini Player cu butonul PiP",
-                            "showAIAskBtn": "Show Ask Button"
+                            "showAIAskBtn": "Show Ask Button",
+                            "showSongDisplayBtn": "Show Song Display Button"
                         }
                     },
                     "preferredVideoQuality": {
@@ -233,6 +234,18 @@
                 "seconds": "{{count}} seconds",
                 "minute": "{{count}} minute",
                 "minutes": "{{count}} minutes"
+            },
+            "songDisplay": {
+                "title": "Song Display & Lyrics",
+                "subtitle": "Show the artwork or synced lyrics instead of the video while a song is playing",
+                "options": {
+                    "mode": {
+                        "title": "Song Display Mode",
+                        "subtitle": "Choose what to show while a song is playing"
+                    },
+                    "wordSync": "Word-by-Word Lyrics",
+                    "lyricsPlus": "Use LyricsPlus for Word-Synced Lyrics"
+                }
             }
         },
         "ttSettings": {
@@ -292,7 +305,20 @@
             "button": "Share",
             "qrCodeScanMessage": "Scan the QR code below to share this video."
         },
-        "screenOff": "Turn off screen"
+        "screenOff": "Turn off screen",
+        "songDisplay": {
+            "title": "Song Display",
+            "button": "Song Display",
+            "modes": {
+                "video": "Video",
+                "artwork": "Artwork",
+                "lyrics": "Lyrics"
+            },
+            "loading": "Loading lyrics…",
+            "notFound": "Lyrics aren't available for this song",
+            "instrumental": "Instrumental",
+            "source": "Lyrics provided by {{source}}"
+        }
     },
     "toasts": {
         "videoAddedToQueue": "Video added to queue.",

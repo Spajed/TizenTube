@@ -84,7 +84,8 @@
                             "showAIAskBtn": "显示提问按钮",
                             "showSpeedCtrlBtn": "显示速度按钮",
                             "addMPBtn": "显示迷你播放器按钮",
-                            "swapMPWithPIP": "将迷你播放器按钮替换为画中画按钮"
+                            "swapMPWithPIP": "将迷你播放器按钮替换为画中画按钮",
+                            "showSongDisplayBtn": "Show Song Display Button"
                         }
                     },
                     "preferredVideoQuality": {
@@ -231,6 +232,18 @@
                     "title": "TizenTube 更新",
                     "subtitle": "正在下载更新，请稍候……"
                 }
+            },
+            "songDisplay": {
+                "title": "Song Display & Lyrics",
+                "subtitle": "Show the artwork or synced lyrics instead of the video while a song is playing",
+                "options": {
+                    "mode": {
+                        "title": "Song Display Mode",
+                        "subtitle": "Choose what to show while a song is playing"
+                    },
+                    "wordSync": "Word-by-Word Lyrics",
+                    "lyricsPlus": "Use LyricsPlus for Word-Synced Lyrics"
+                }
             }
         },
         "ttSettings": {
@@ -290,7 +303,20 @@
             "button": "分享",
             "qrCodeScanMessage": "扫描下方二维码分享此视频。"
         },
-        "screenOff": "关闭屏幕"
+        "screenOff": "关闭屏幕",
+        "songDisplay": {
+            "title": "Song Display",
+            "button": "Song Display",
+            "modes": {
+                "video": "Video",
+                "artwork": "Artwork",
+                "lyrics": "Lyrics"
+            },
+            "loading": "Loading lyrics…",
+            "notFound": "Lyrics aren't available for this song",
+            "instrumental": "Instrumental",
+            "source": "Lyrics provided by {{source}}"
+        }
     },
     "toasts": {
         "videoAddedToQueue": "视频已添加到播放队列。",

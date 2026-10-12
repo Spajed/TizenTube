@@ -3,6 +3,7 @@
 import { extractAssignedFunctions } from "../utils/ASTParser.js";
 import { configRead } from "../config.js";
 import { ButtonRenderer } from "./ytUI.js";
+import { isCurrentVideoMusic } from "../features/songDisplay.js";
 import { t } from 'i18next';
 
 function applyPatches() {
@@ -114,6 +115,33 @@ function applyPatches() {
                                 customAction:
                                 {
                                     action: 'TT_SPEED_SETTINGS_SHOW',
+                                }
+                            }
+                        )
+                    }
+                });
+                return res;
+            }
+        }
+
+        if (engagementActionButton && configRead('enableSongDisplayButton')) {
+            const origEngagementActionButton = inst[engagementActionButton];
+            inst[engagementActionButton] = function () {
+                const res = origEngagementActionButton.apply(this, arguments);
+                if (!isCurrentVideoMusic()) {
+                    return res.filter(item => item.type !== 'TRANSPORT_CONTROLS_BUTTON_TYPE_SONG_DISPLAY');
+                }
+                res.find(item => item.type === 'TRANSPORT_CONTROLS_BUTTON_TYPE_SONG_DISPLAY') || res.push({
+                    type: 'TRANSPORT_CONTROLS_BUTTON_TYPE_SONG_DISPLAY',
+                    button: {
+                        buttonRenderer: ButtonRenderer(
+                            false,
+                            t('player.songDisplay.button'),
+                            'YOUTUBE_MUSIC',
+                            {
+                                customAction:
+                                {
+                                    action: 'TT_SONG_DISPLAY_SHOW',
                                 }
                             }
                         )

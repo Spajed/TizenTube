@@ -226,6 +226,44 @@ export default function modernUI(update, parameters) {
             ]
         },
         {
+            name: t('settings.options.songDisplay.title'),
+            icon: 'YOUTUBE_MUSIC',
+            value: null,
+            menuHeader: {
+                title: t('settings.options.songDisplay.title'),
+                subtitle: t('settings.options.songDisplay.subtitle')
+            },
+            options: [
+                {
+                    name: t('settings.options.songDisplay.options.mode.title'),
+                    icon: 'YOUTUBE_MUSIC',
+                    value: null,
+                    menuId: 'tt-song-display-mode',
+                    menuHeader: {
+                        title: t('settings.options.songDisplay.options.mode.title'),
+                        subtitle: t('settings.options.songDisplay.options.mode.subtitle')
+                    },
+                    options: ['video', 'artwork', 'lyrics'].map((mode) => {
+                        return {
+                            name: t(`player.songDisplay.modes.${mode}`),
+                            key: 'songDisplayMode',
+                            value: mode
+                        }
+                    })
+                },
+                {
+                    name: t('settings.options.songDisplay.options.wordSync'),
+                    icon: 'MENU',
+                    value: 'enableWordSyncedLyrics'
+                },
+                {
+                    name: t('settings.options.songDisplay.options.lyricsPlus'),
+                    icon: 'OPEN_IN_NEW',
+                    value: 'enableLyricsPlus'
+                }
+            ]
+        },
+        {
             name: t('settings.options.misc.title'),
             icon: 'SETTINGS',
             value: null,
@@ -362,6 +400,11 @@ export default function modernUI(update, parameters) {
                             name: t('settings.options.videoPlayer.options.patching.options.showSpeedCtrlBtn'),
                             icon: 'SLOW_MOTION_VIDEO',
                             value: 'enableSpeedControlsButton'
+                        },
+                        {
+                            name: t('settings.options.videoPlayer.options.patching.options.showSongDisplayBtn'),
+                            icon: 'YOUTUBE_MUSIC',
+                            value: 'enableSongDisplayButton'
                         },
                         {
                             name: t('settings.options.videoPlayer.options.patching.options.addMPBtn'),

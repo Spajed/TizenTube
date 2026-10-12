@@ -68,6 +68,10 @@ const defaultConfig = {
   disableEnlargingThumbnails: false,
   enableShrinkingThumbnails: false,
   hideRelatedVideosPlayer: false,
+  songDisplayMode: 'video',
+  enableSongDisplayButton: true,
+  enableWordSyncedLyrics: true,
+  enableLyricsPlus: true,
 };
 
 let localConfig;

@@ -8,6 +8,7 @@ import { t } from 'i18next';
 import { requestNextAndNavigateChannel, getFeedbackPanelTokens, sendFeedbackToken } from './utils/innerTubeCalls.js';
 import qrcode from 'qrcode-npm';
 import showGuideSettings from './ui/sidebarModification.js';
+import { isCurrentVideoMusic, showSongDisplayModes, setSongDisplayMode } from './features/songDisplay.js';
 
 export default function resolveCommand(cmd, _) {
     // resolveCommand function is pretty OP, it can do from opening modals, changing client settings and way more.
@@ -132,6 +133,23 @@ export function patchResolveCommand() {
                         ])
                     );
 
+                    if (isCurrentVideoMusic()) {
+                        items.splice(2, 0,
+                            buttonItem(
+                                {
+                                    title: t('player.songDisplay.title'),
+                                    subtitle: t(`player.songDisplay.modes.${configRead('songDisplayMode')}`)
+                                },
+                                { icon: 'YOUTUBE_MUSIC' }, [
+                                {
+                                    customAction: {
+                                        action: 'TT_SONG_DISPLAY_SHOW'
+                                    }
+                                }
+                            ])
+                        );
+                    }
+
                     if (window.h5vcc && window.h5vcc.tizentube && window.h5vcc.tizentube.HasSystemFeature &&
                         window.h5vcc.tizentube.HasSystemFeature('android.software.picture_in_picture')) {
                         cmd.openPopupAction.popup.overlaySectionRenderer.overlay.overlayTwoPanelRenderer.actionPanel.overlayPanelRenderer.content.overlayPanelItemListRenderer.items.splice(3, 0,
@@ -216,6 +234,12 @@ function customAction(action, parameters) {
             break;
         case 'TT_SPEED_SETTINGS_SHOW':
             speedSettings();
+            break;
+        case 'TT_SONG_DISPLAY_SHOW':
+            showSongDisplayModes();
+            break;
+        case 'SET_SONG_DISPLAY_MODE':
+            setSongDisplayMode(parameters);
             break;
         case 'UPDATE_REMIND_LATER':
             configWrite('dontCheckUpdateUntil', parameters);
